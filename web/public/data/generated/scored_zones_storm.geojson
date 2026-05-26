@@ -1,0 +1,372 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "scenario": "storm",
+    "display_name": "Severe Wind & Rain Storm",
+    "prototype_data": true,
+    "disclaimer": "Representative prototype data only; not an operational outage forecast or equipment-failure prediction.",
+    "geometry_note": "Generalized demonstration polygons; not utility asset topology."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.626,
+              43.58
+            ],
+            [
+              -79.611,
+              43.58
+            ],
+            [
+              -79.611,
+              43.594
+            ],
+            [
+              -79.626,
+              43.594
+            ],
+            [
+              -79.626,
+              43.58
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "cooksville-central",
+        "zone_name": "Cooksville Central",
+        "scenario": "storm",
+        "hazard_score": 95,
+        "infrastructure_score": 90,
+        "capacity_score": 73,
+        "risk_score": 87,
+        "risk_level": "Critical",
+        "primary_driver": "Wind + overhead + vegetation",
+        "recommended_action": "Inspect overhead corridors",
+        "urgency": "Immediate",
+        "prototype_data": true,
+        "disclaimer": "Representative prototype data only; not an operational outage forecast or equipment-failure prediction."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.782,
+              43.608
+            ],
+            [
+              -79.762,
+              43.608
+            ],
+            [
+              -79.762,
+              43.628
+            ],
+            [
+              -79.782,
+              43.628
+            ],
+            [
+              -79.782,
+              43.608
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "meadowvale-north",
+        "zone_name": "Meadowvale North",
+        "scenario": "storm",
+        "hazard_score": 80,
+        "infrastructure_score": 68,
+        "capacity_score": 99,
+        "risk_score": 82,
+        "risk_level": "Critical",
+        "primary_driver": "Storm plus constrained margin",
+        "recommended_action": "Stage demand monitoring",
+        "urgency": "Immediate",
+        "prototype_data": true,
+        "disclaimer": "Representative prototype data only; not an operational outage forecast or equipment-failure prediction."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.592,
+              43.538
+            ],
+            [
+              -79.572,
+              43.538
+            ],
+            [
+              -79.572,
+              43.558
+            ],
+            [
+              -79.592,
+              43.558
+            ],
+            [
+              -79.592,
+              43.538
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "port-credit-east",
+        "zone_name": "Port Credit East",
+        "scenario": "storm",
+        "hazard_score": 94,
+        "infrastructure_score": 88,
+        "capacity_score": 48,
+        "risk_score": 78,
+        "risk_level": "Critical",
+        "primary_driver": "Rain/flood exposure",
+        "recommended_action": "Check flood-sensitive areas",
+        "urgency": "Immediate",
+        "prototype_data": true,
+        "disclaimer": "Representative prototype data only; not an operational outage forecast or equipment-failure prediction."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.758,
+              43.568
+            ],
+            [
+              -79.738,
+              43.568
+            ],
+            [
+              -79.738,
+              43.588
+            ],
+            [
+              -79.758,
+              43.588
+            ],
+            [
+              -79.758,
+              43.568
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "streetsville-west",
+        "zone_name": "Streetsville West",
+        "scenario": "storm",
+        "hazard_score": 72,
+        "infrastructure_score": 76,
+        "capacity_score": 45,
+        "risk_score": 65,
+        "risk_level": "Elevated",
+        "primary_driver": "Tree canopy overlap",
+        "recommended_action": "Schedule vegetation review",
+        "urgency": "Medium",
+        "prototype_data": true,
+        "disclaimer": "Representative prototype data only; not an operational outage forecast or equipment-failure prediction."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.652,
+              43.498
+            ],
+            [
+              -79.632,
+              43.498
+            ],
+            [
+              -79.632,
+              43.518
+            ],
+            [
+              -79.652,
+              43.518
+            ],
+            [
+              -79.652,
+              43.498
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "clarkson-south",
+        "zone_name": "Clarkson South",
+        "scenario": "storm",
+        "hazard_score": 75,
+        "infrastructure_score": 58,
+        "capacity_score": 40,
+        "risk_score": 59,
+        "risk_level": "Elevated",
+        "primary_driver": "Water exposure",
+        "recommended_action": "Monitor flood context",
+        "urgency": "Medium",
+        "prototype_data": true,
+        "disclaimer": "Representative prototype data only; not an operational outage forecast or equipment-failure prediction."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.658,
+              43.588
+            ],
+            [
+              -79.638,
+              43.588
+            ],
+            [
+              -79.638,
+              43.608
+            ],
+            [
+              -79.658,
+              43.608
+            ],
+            [
+              -79.658,
+              43.588
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "city-centre",
+        "zone_name": "City Centre",
+        "scenario": "storm",
+        "hazard_score": 63,
+        "infrastructure_score": 45,
+        "capacity_score": 55,
+        "risk_score": 55,
+        "risk_level": "Elevated",
+        "primary_driver": "Dense demand",
+        "recommended_action": "Monitor evening peak",
+        "urgency": "Medium",
+        "prototype_data": true,
+        "disclaimer": "Representative prototype data only; not an operational outage forecast or equipment-failure prediction."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.738,
+              43.528
+            ],
+            [
+              -79.718,
+              43.528
+            ],
+            [
+              -79.718,
+              43.548
+            ],
+            [
+              -79.738,
+              43.548
+            ],
+            [
+              -79.738,
+              43.528
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "erin-mills",
+        "zone_name": "Erin Mills",
+        "scenario": "storm",
+        "hazard_score": 60,
+        "infrastructure_score": 50,
+        "capacity_score": 40,
+        "risk_score": 51,
+        "risk_level": "Elevated",
+        "primary_driver": "Storm exposure",
+        "recommended_action": "Monitor corridor conditions",
+        "urgency": "Medium",
+        "prototype_data": true,
+        "disclaimer": "Representative prototype data only; not an operational outage forecast or equipment-failure prediction."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.648,
+              43.708
+            ],
+            [
+              -79.628,
+              43.708
+            ],
+            [
+              -79.628,
+              43.728
+            ],
+            [
+              -79.648,
+              43.728
+            ],
+            [
+              -79.648,
+              43.708
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "malton-industrial",
+        "zone_name": "Malton Industrial",
+        "scenario": "storm",
+        "hazard_score": 50,
+        "infrastructure_score": 40,
+        "capacity_score": 45,
+        "risk_score": 46,
+        "risk_level": "Low",
+        "primary_driver": "Industrial demand",
+        "recommended_action": "Continue monitoring",
+        "urgency": "Routine",
+        "prototype_data": true,
+        "disclaimer": "Representative prototype data only; not an operational outage forecast or equipment-failure prediction."
+      }
+    }
+  ]
+}
