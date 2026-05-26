@@ -1,6 +1,12 @@
 import type { ScenarioId, ScenarioSummary, ScoredZonesGeoJSON } from "./types";
 
-/** Load generated outputs from `public/data/generated/` (implemented in P3 / I1). */
+/**
+ * Load generated outputs from `public/data/generated/` (P1 generates; P3/I1 consume).
+ *
+ * Expected files per scenario (`normal` | `storm` | `heatwave_ev`):
+ * - `summary_{scenario}.json`
+ * - `scored_zones_{scenario}.geojson`
+ */
 
 export async function loadScenarioSummary(
   scenario: ScenarioId,

@@ -19,7 +19,8 @@ build/
 .ruff_cache/
 
 # Engine outputs (regenerated; web copy lives under web/public)
-engine/output/
+engine/output/*
+!engine/output/.gitkeep
 
 # Environment and secrets
 .env

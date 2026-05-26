@@ -42,11 +42,16 @@ export interface ScenarioSummary {
   disclaimer: string;
 }
 
+export interface GeoJsonPolygon {
+  type: "Polygon";
+  coordinates: number[][][];
+}
+
 export interface ScoredZonesGeoJSON {
   type: "FeatureCollection";
   features: Array<{
     type: "Feature";
-    geometry: GeoJSON.Polygon;
+    geometry: GeoJsonPolygon;
     properties: RiskZoneProperties;
   }>;
 }
