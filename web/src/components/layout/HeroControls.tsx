@@ -19,8 +19,7 @@ export function HeroControls(props: {
   return (
     <section
       className={[
-        "rounded-[var(--radius-card)] border border-[var(--border)] bg-[var(--card)]",
-        "shadow-[0_1px_2px_rgba(16,24,40,0.06)]",
+        "gl-panel-elevated overflow-hidden",
         props.className ?? "",
       ].join(" ")}
       aria-label="Scenario controls"
@@ -73,13 +72,13 @@ export function HeroControls(props: {
                     "inline-flex items-center gap-2 rounded-lg border px-3 py-2 text-xs font-semibold",
                     "focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--cyan-400)]",
                     selected
-                      ? "border-[var(--blue-600)] bg-[color-mix(in_srgb,var(--blue-600)_10%,white)] text-[var(--navy-950)]"
-                      : "border-[var(--border)] bg-white text-[var(--text-primary)] hover:bg-[color-mix(in_srgb,var(--surface)_70%,white)]",
+                      ? "border-[var(--blue-600)] bg-[var(--navy-900)] text-white shadow-[0_2px_8px_rgba(11,37,69,0.25)]"
+                      : "border-[var(--border)] bg-white text-[var(--text-primary)] hover:border-[var(--border-strong)] hover:bg-[var(--surface-elevated)]",
                   ].join(" ")}
                 >
                   <span>{SCENARIO_LABEL[id]}</span>
                   {selected && (
-                    <span className="rounded-full bg-[var(--blue-600)] px-1.5 py-0.5 text-[10px] font-bold text-white">
+                    <span className="rounded-full bg-[var(--cyan-400)] px-1.5 py-0.5 text-[10px] font-bold text-[var(--navy-950)]">
                       ✓
                     </span>
                   )}

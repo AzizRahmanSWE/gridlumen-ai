@@ -1,9 +1,9 @@
 import type { RiskLevel } from "../data/types";
 
 export const RISK_COLORS: Record<RiskLevel, string> = {
-  Low: "#17B26A",
-  Elevated: "#F79009",
-  Critical: "#F04438",
+  Low: "#059669",
+  Elevated: "#D97706",
+  Critical: "#DC2626",
 };
 
 export const RISK_LABELS: Record<RiskLevel, string> = {
@@ -15,10 +15,10 @@ export const RISK_LABELS: Record<RiskLevel, string> = {
 export function riskLevelClass(level: RiskLevel): string {
   switch (level) {
     case "Critical":
-      return "bg-[#F04438]/15 text-[#F04438] border-[#F04438]/40";
+      return "bg-red-50 text-red-700 border-red-200/80 ring-red-100";
     case "Elevated":
-      return "bg-[#F79009]/15 text-[#F79009] border-[#F79009]/40";
+      return "bg-amber-50 text-amber-800 border-amber-200/80 ring-amber-100";
     case "Low":
-      return "bg-[#17B26A]/15 text-[#17B26A] border-[#17B26A]/40";
+      return "bg-emerald-50 text-emerald-700 border-emerald-200/80 ring-emerald-100";
   }
 }

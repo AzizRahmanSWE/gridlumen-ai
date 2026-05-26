@@ -26,12 +26,13 @@ export function KpiCards(props: {
       aria-label="Scenario KPIs"
     >
       <Card
+        accent="critical"
         title="Critical Zones"
         subtitle={props.criticalDeltaLabel ?? "Change vs baseline shown in detail"}
       >
         <div className="flex items-end justify-between gap-4">
           <div>
-            <div className="text-3xl font-semibold tracking-tight text-[var(--text-primary)]">
+            <div className="gl-metric-value text-3xl font-bold text-[var(--text-primary)]">
               {props.summary.critical_zones}
             </div>
             <div className="mt-1 inline-flex items-center gap-2 text-xs text-[var(--text-muted)]">
@@ -52,7 +53,7 @@ export function KpiCards(props: {
       <Card title="Zones to Review" subtitle="Elevated + Critical categories">
         <div className="flex items-end justify-between gap-4">
           <div>
-            <div className="text-3xl font-semibold tracking-tight text-[var(--text-primary)]">
+            <div className="gl-metric-value text-3xl font-bold text-[var(--text-primary)]">
               {zonesToReview}
             </div>
             <div className="mt-1 text-xs text-[var(--text-muted)]">
@@ -70,10 +71,10 @@ export function KpiCards(props: {
         </div>
       </Card>
 
-      <Card title="Peak Utilization" subtitle="Modeled capacity indicator">
+      <Card accent="utilization" title="Peak Utilization" subtitle="Modeled capacity indicator">
         <div className="flex items-end justify-between gap-4">
           <div>
-            <div className="text-3xl font-semibold tracking-tight text-[var(--text-primary)]">
+            <div className="gl-metric-value text-3xl font-bold text-[var(--text-primary)]">
               {Math.round(props.summary.peak_capacity_utilization_percent)}%
             </div>
             <div className="mt-1 text-xs text-[var(--text-muted)]">
@@ -90,7 +91,7 @@ export function KpiCards(props: {
         </div>
       </Card>
 
-      <Card title="Highest Priority" subtitle="Top ranked zone in this scenario">
+      <Card accent="priority" title="Highest Priority" subtitle="Top ranked zone in this scenario">
         <div className="flex items-start justify-between gap-4">
           <div className="min-w-0">
             <div className="truncate text-base font-semibold text-[var(--text-primary)]">

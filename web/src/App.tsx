@@ -27,11 +27,8 @@ export type AppProps = {
 
 function PrototypeBanner() {
   return (
-    <p
-      className="rounded-lg border border-amber-300/60 bg-amber-50 px-4 py-2.5 text-center text-xs leading-relaxed text-amber-950"
-      role="note"
-    >
-      <span className="font-semibold uppercase tracking-wide">Prototype demo</span>
+    <p className="gl-disclaimer-strip px-4 py-2.5 text-center" role="note">
+      <span className="font-semibold uppercase tracking-wider">Prototype demo</span>
       {" · "}
       {MANDATORY_DISCLAIMER}
     </p>
@@ -142,6 +139,15 @@ export default function App({ preloaded }: AppProps) {
           ) : (
             <KpiSkeleton />
           )}
+
+          <div className="flex items-end justify-between gap-4 pt-2">
+            <div>
+              <p className="gl-section-label">Operations workspace</p>
+              <h2 className="mt-1 text-lg font-semibold tracking-tight text-[var(--text-primary)]">
+                Risk map &amp; zone intelligence
+              </h2>
+            </div>
+          </div>
 
           <div
             id="risk-map"

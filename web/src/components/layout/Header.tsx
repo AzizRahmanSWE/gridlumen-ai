@@ -17,19 +17,26 @@ export function Header(props: {
   return (
     <header
       className={[
-        "border-b border-white/10 bg-[var(--navy-950)] text-white",
+        "border-b border-white/10 bg-gradient-to-r from-[var(--navy-950)] via-[var(--navy-900)] to-[var(--navy-950)] text-white shadow-[0_4px_24px_rgba(7,26,51,0.2)]",
         props.className ?? "",
       ].join(" ")}
     >
       <div className="mx-auto max-w-[1240px] px-6">
         <div className="flex items-center justify-between gap-4 py-4">
           <div className="min-w-0">
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="flex flex-wrap items-center gap-3">
+              <img
+                src="/gridlumen-mark.svg"
+                alt=""
+                width={36}
+                height={36}
+                className="shrink-0 rounded-lg shadow-[0_2px_8px_rgba(34,211,238,0.25)]"
+              />
               <div className="flex items-baseline gap-2">
-                <span className="text-sm font-semibold tracking-tight">
+                <span className="text-base font-semibold tracking-tight">
                   GridLumen AI
                 </span>
-                <span className="hidden text-sm text-white/70 sm:inline">
+                <span className="hidden text-sm font-normal text-white/65 sm:inline">
                   Climate &amp; Capacity Risk Radar
                 </span>
               </div>
