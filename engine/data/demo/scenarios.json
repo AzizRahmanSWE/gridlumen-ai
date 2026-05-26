@@ -1,0 +1,223 @@
+{
+  "schema_version": "1.0.0",
+  "disclaimer": "Representative prototype data only; not an operational outage forecast or equipment-failure prediction.",
+  "formula": "Priority Risk Score = round(0.40 × Hazard Exposure + 0.30 × Infrastructure Exposure + 0.30 × Capacity Stress)",
+  "scenarios": {
+    "normal": {
+      "scenario_id": "normal",
+      "display_name": "Normal Conditions",
+      "default_selected_zone_id": "meadowvale-north",
+      "peak_capacity_utilization_percent": 71,
+      "zones": {
+        "meadowvale-north": {
+          "hazard_score": 50,
+          "infrastructure_score": 72,
+          "capacity_score": 100,
+          "primary_driver": "Low margin",
+          "recommended_action": "Review capacity planning",
+          "urgency": "High"
+        },
+        "cooksville-central": {
+          "hazard_score": 45,
+          "infrastructure_score": 82,
+          "capacity_score": 63,
+          "primary_driver": "Vegetation/overhead exposure",
+          "recommended_action": "Monitor corridor conditions",
+          "urgency": "Medium"
+        },
+        "port-credit-east": {
+          "hazard_score": 66,
+          "infrastructure_score": 62,
+          "capacity_score": 45,
+          "primary_driver": "Water exposure",
+          "recommended_action": "Monitor flood context",
+          "urgency": "Medium"
+        },
+        "streetsville-west": {
+          "hazard_score": 40,
+          "infrastructure_score": 75,
+          "capacity_score": 50,
+          "primary_driver": "Tree canopy overlap",
+          "recommended_action": "Schedule vegetation review",
+          "urgency": "Medium"
+        },
+        "city-centre": {
+          "hazard_score": 30,
+          "infrastructure_score": 48,
+          "capacity_score": 68,
+          "primary_driver": "Dense demand",
+          "recommended_action": "Routine monitoring",
+          "urgency": "Routine"
+        },
+        "erin-mills": {
+          "hazard_score": 35,
+          "infrastructure_score": 45,
+          "capacity_score": 48,
+          "primary_driver": "Residential demand",
+          "recommended_action": "Routine monitoring",
+          "urgency": "Routine"
+        },
+        "malton-industrial": {
+          "hazard_score": 30,
+          "infrastructure_score": 40,
+          "capacity_score": 53,
+          "primary_driver": "Industrial demand",
+          "recommended_action": "Routine monitoring",
+          "urgency": "Routine"
+        },
+        "clarkson-south": {
+          "hazard_score": 41,
+          "infrastructure_score": 40,
+          "capacity_score": 32,
+          "primary_driver": "Water context",
+          "recommended_action": "Routine monitoring",
+          "urgency": "Routine"
+        }
+      }
+    },
+    "storm": {
+      "scenario_id": "storm",
+      "display_name": "Severe Wind & Rain Storm",
+      "default_selected_zone_id": "cooksville-central",
+      "peak_capacity_utilization_percent": 76,
+      "zones": {
+        "cooksville-central": {
+          "hazard_score": 95,
+          "infrastructure_score": 90,
+          "capacity_score": 73,
+          "primary_driver": "Wind + overhead + vegetation",
+          "recommended_action": "Inspect overhead corridors",
+          "urgency": "Immediate"
+        },
+        "meadowvale-north": {
+          "hazard_score": 80,
+          "infrastructure_score": 68,
+          "capacity_score": 99,
+          "primary_driver": "Storm plus constrained margin",
+          "recommended_action": "Stage demand monitoring",
+          "urgency": "Immediate"
+        },
+        "port-credit-east": {
+          "hazard_score": 94,
+          "infrastructure_score": 88,
+          "capacity_score": 48,
+          "primary_driver": "Rain/flood exposure",
+          "recommended_action": "Check flood-sensitive areas",
+          "urgency": "Immediate"
+        },
+        "streetsville-west": {
+          "hazard_score": 72,
+          "infrastructure_score": 76,
+          "capacity_score": 45,
+          "primary_driver": "Tree canopy overlap",
+          "recommended_action": "Schedule vegetation review",
+          "urgency": "Medium"
+        },
+        "clarkson-south": {
+          "hazard_score": 75,
+          "infrastructure_score": 58,
+          "capacity_score": 40,
+          "primary_driver": "Water exposure",
+          "recommended_action": "Monitor flood context",
+          "urgency": "Medium"
+        },
+        "city-centre": {
+          "hazard_score": 63,
+          "infrastructure_score": 45,
+          "capacity_score": 55,
+          "primary_driver": "Dense demand",
+          "recommended_action": "Monitor evening peak",
+          "urgency": "Medium"
+        },
+        "erin-mills": {
+          "hazard_score": 60,
+          "infrastructure_score": 50,
+          "capacity_score": 40,
+          "primary_driver": "Storm exposure",
+          "recommended_action": "Monitor corridor conditions",
+          "urgency": "Medium"
+        },
+        "malton-industrial": {
+          "hazard_score": 50,
+          "infrastructure_score": 40,
+          "capacity_score": 45,
+          "primary_driver": "Industrial demand",
+          "recommended_action": "Continue monitoring",
+          "urgency": "Routine"
+        }
+      }
+    },
+    "heatwave_ev": {
+      "scenario_id": "heatwave_ev",
+      "display_name": "Heatwave + Evening EV Demand",
+      "default_selected_zone_id": "meadowvale-north",
+      "peak_capacity_utilization_percent": 94,
+      "zones": {
+        "meadowvale-north": {
+          "hazard_score": 95,
+          "infrastructure_score": 77,
+          "capacity_score": 100,
+          "primary_driver": "EV demand + low margin",
+          "recommended_action": "Review load-relief strategy",
+          "urgency": "Immediate"
+        },
+        "city-centre": {
+          "hazard_score": 90,
+          "infrastructure_score": 55,
+          "capacity_score": 94,
+          "primary_driver": "Cooling + density",
+          "recommended_action": "Monitor evening peak",
+          "urgency": "Immediate"
+        },
+        "erin-mills": {
+          "hazard_score": 72,
+          "infrastructure_score": 50,
+          "capacity_score": 85,
+          "primary_driver": "Residential EV adoption",
+          "recommended_action": "Planning review",
+          "urgency": "High"
+        },
+        "cooksville-central": {
+          "hazard_score": 68,
+          "infrastructure_score": 65,
+          "capacity_score": 65,
+          "primary_driver": "Cooling demand",
+          "recommended_action": "Monitor threshold",
+          "urgency": "Medium"
+        },
+        "malton-industrial": {
+          "hazard_score": 70,
+          "infrastructure_score": 50,
+          "capacity_score": 64,
+          "primary_driver": "Commercial demand",
+          "recommended_action": "Evaluate margin",
+          "urgency": "Medium"
+        },
+        "streetsville-west": {
+          "hazard_score": 60,
+          "infrastructure_score": 52,
+          "capacity_score": 55,
+          "primary_driver": "Residential demand",
+          "recommended_action": "Monitor evening peak",
+          "urgency": "Medium"
+        },
+        "clarkson-south": {
+          "hazard_score": 57,
+          "infrastructure_score": 44,
+          "capacity_score": 55,
+          "primary_driver": "Heat demand",
+          "recommended_action": "Monitor threshold",
+          "urgency": "Medium"
+        },
+        "port-credit-east": {
+          "hazard_score": 60,
+          "infrastructure_score": 40,
+          "capacity_score": 40,
+          "primary_driver": "Water context",
+          "recommended_action": "Continue routine monitoring",
+          "urgency": "Routine"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "description": "Generalized Mississauga-area pilot zones for hackathon prototype only",
+    "disclaimer": "Representative prototype data only; not an operational outage forecast or equipment-failure prediction."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_id": "cooksville-central",
+        "zone_name": "Cooksville Central"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-79.626, 43.580], [-79.611, 43.580], [-79.611, 43.594], [-79.626, 43.594], [-79.626, 43.580]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_id": "meadowvale-north",
+        "zone_name": "Meadowvale North"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-79.782, 43.608], [-79.762, 43.608], [-79.762, 43.628], [-79.782, 43.628], [-79.782, 43.608]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_id": "port-credit-east",
+        "zone_name": "Port Credit East"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-79.592, 43.538], [-79.572, 43.538], [-79.572, 43.558], [-79.592, 43.558], [-79.592, 43.538]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_id": "streetsville-west",
+        "zone_name": "Streetsville West"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-79.758, 43.568], [-79.738, 43.568], [-79.738, 43.588], [-79.758, 43.588], [-79.758, 43.568]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_id": "erin-mills",
+        "zone_name": "Erin Mills"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-79.738, 43.528], [-79.718, 43.528], [-79.718, 43.548], [-79.738, 43.548], [-79.738, 43.528]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_id": "malton-industrial",
+        "zone_name": "Malton Industrial"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-79.648, 43.708], [-79.628, 43.708], [-79.628, 43.728], [-79.648, 43.728], [-79.648, 43.708]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_id": "clarkson-south",
+        "zone_name": "Clarkson South"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-79.652, 43.498], [-79.632, 43.498], [-79.632, 43.518], [-79.652, 43.518], [-79.652, 43.498]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_id": "city-centre",
+        "zone_name": "City Centre"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-79.658, 43.588], [-79.638, 43.588], [-79.638, 43.608], [-79.658, 43.608], [-79.658, 43.588]]]
+      }
+    }
+  ]
+}

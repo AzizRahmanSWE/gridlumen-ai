@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+.web/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Engine outputs (regenerated; web copy lives under web/public)
+engine/output/
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+web/.env
+!web/.env.example
+
+# IDE / OS
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+*.swo
+
+# Build artifacts
+web/dist/
+coverage/
+*.log
+
+# Hermes / Ollama local config (never commit)
+.hermes/
+ollama/
+
+# ArcGIS screenshots (optional local captures)
+arcgis/screenshots/*.png
+!arcgis/screenshots/.gitkeep
