@@ -5,42 +5,51 @@ export type InterventionQueueProps = {
   zones: RiskZoneProperties[];
   selectedZoneId: string | null;
   onSelectZone: (zoneId: string) => void;
+  compact?: boolean;
 };
 
 export function InterventionQueue({
   zones,
   selectedZoneId,
   onSelectZone,
+  compact = false,
 }: InterventionQueueProps) {
   return (
-    <section aria-labelledby="intervention-queue-heading">
-      <h2
-        id="intervention-queue-heading"
-        className="mb-3 text-sm font-semibold uppercase tracking-wide text-[#101828]"
-      >
-        Priority intervention queue
-      </h2>
-      <div className="overflow-x-auto rounded-2xl border border-[#E4E7EC] bg-white shadow-sm">
-        <table className="w-full min-w-[640px] border-collapse text-left text-sm">
+    <section aria-labelledby="intervention-queue-heading" className="min-w-0">
+      <div className="mb-2 flex items-center justify-between gap-2">
+        <h2
+          id="intervention-queue-heading"
+          className="text-xs font-bold uppercase tracking-[0.12em] text-[var(--text-primary)]"
+        >
+          Priority intervention queue
+        </h2>
+        <span className="text-[11px] font-medium text-[var(--text-muted)]">
+          Ranked by risk score
+        </span>
+      </div>
+      <div className="overflow-x-auto rounded-xl border border-[var(--border)] bg-white shadow-[var(--shadow-card)]">
+        <table
+          className={[
+            "w-full min-w-[520px] border-collapse text-left",
+            compact ? "text-xs" : "text-sm",
+          ].join(" ")}
+        >
           <thead>
-            <tr className="border-b border-[#E4E7EC] bg-[#F5F8FC] text-xs uppercase tracking-wide text-[#667085]">
-              <th scope="col" className="px-4 py-3 font-medium">
+            <tr className="border-b border-[var(--border)] bg-[var(--surface)] text-[10px] uppercase tracking-wide text-[var(--text-muted)]">
+              <th scope="col" className="px-3 py-2 font-semibold">
                 Rank
               </th>
-              <th scope="col" className="px-4 py-3 font-medium">
+              <th scope="col" className="px-3 py-2 font-semibold">
                 Zone
               </th>
-              <th scope="col" className="px-4 py-3 font-medium">
+              <th scope="col" className="px-3 py-2 font-semibold">
                 Status / Score
               </th>
-              <th scope="col" className="px-4 py-3 font-medium">
+              <th scope="col" className="px-3 py-2 font-semibold">
                 Primary driver
               </th>
-              <th scope="col" className="px-4 py-3 font-medium">
-                Recommended action
-              </th>
-              <th scope="col" className="px-4 py-3 font-medium">
-                Urgency
+              <th scope="col" className="px-3 py-2 font-semibold">
+                Action
               </th>
             </tr>
           </thead>
@@ -50,11 +59,12 @@ export function InterventionQueue({
               return (
                 <tr
                   key={zone.zone_id}
-                  className={`cursor-pointer border-b border-[#E4E7EC]/80 transition-colors last:border-0 ${
+                  className={[
+                    "cursor-pointer border-b border-[var(--border)]/80 transition-colors last:border-0",
                     isSelected
-                      ? "bg-cyan-50/80 outline outline-2 outline-[#22D3EE] -outline-offset-2"
-                      : "hover:bg-[#F5F8FC]"
-                  }`}
+                      ? "bg-[color-mix(in_srgb,var(--cyan-400)_12%,white)] ring-2 ring-inset ring-[var(--cyan-400)]"
+                      : "hover:bg-[var(--surface)]",
+                  ].join(" ")}
                   tabIndex={0}
                   role="button"
                   aria-pressed={isSelected}
@@ -67,28 +77,27 @@ export function InterventionQueue({
                     }
                   }}
                 >
-                  <td className="px-4 py-3 font-semibold text-[#101828]">
+                  <td className="px-3 py-2 font-bold text-[var(--text-primary)]">
                     {index + 1}
                   </td>
-                  <td className="px-4 py-3 font-medium text-[#101828]">
+                  <td className="px-3 py-2 font-semibold text-[var(--text-primary)]">
                     {zone.zone_name}
                   </td>
-                  <td className="px-4 py-3">
+                  <td className="px-3 py-2">
                     <span
-                      className={`mr-2 inline-flex rounded-full border px-2 py-0.5 text-xs font-semibold ${riskLevelClass(zone.risk_level)}`}
+                      className={`mr-2 inline-flex rounded-full border px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide ${riskLevelClass(zone.risk_level)}`}
                     >
                       {zone.risk_level}
                     </span>
-                    <span className="font-semibold">{zone.risk_score}</span>
+                    <span className="font-bold text-[var(--text-primary)]">
+                      {zone.risk_score}
+                    </span>
                   </td>
-                  <td className="max-w-[180px] px-4 py-3 text-[#667085]">
+                  <td className="max-w-[160px] px-3 py-2 text-[var(--text-muted)]">
                     {zone.primary_driver}
                   </td>
-                  <td className="max-w-[200px] px-4 py-3 text-[#101828]">
+                  <td className="max-w-[180px] px-3 py-2 font-medium text-[var(--text-primary)]">
                     {zone.recommended_action}
-                  </td>
-                  <td className="px-4 py-3 font-medium text-[#1570EF]">
-                    {zone.urgency}
                   </td>
                 </tr>
               );

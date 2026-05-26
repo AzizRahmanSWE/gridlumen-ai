@@ -47,11 +47,18 @@ export interface GeoJsonPolygon {
   coordinates: number[][][];
 }
 
+export interface GeoJsonMultiPolygon {
+  type: "MultiPolygon";
+  coordinates: number[][][][];
+}
+
+export type GeoJsonGeometry = GeoJsonPolygon | GeoJsonMultiPolygon;
+
 export interface ScoredZonesGeoJSON {
   type: "FeatureCollection";
   features: Array<{
     type: "Feature";
-    geometry: GeoJsonPolygon;
+    geometry: GeoJsonGeometry;
     properties: RiskZoneProperties;
   }>;
 }

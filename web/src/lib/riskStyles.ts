@@ -15,10 +15,10 @@ export const RISK_LABELS: Record<RiskLevel, string> = {
 export function riskLevelClass(level: RiskLevel): string {
   switch (level) {
     case "Critical":
-      return "bg-[#F04438]/15 text-[#F04438] border-[#F04438]/40";
+      return "border-[color-mix(in_srgb,var(--risk-critical)_45%,white)] bg-[color-mix(in_srgb,var(--risk-critical)_16%,white)] text-[color-mix(in_srgb,var(--risk-critical)_92%,#5A1010)]";
     case "Elevated":
-      return "bg-[#F79009]/15 text-[#F79009] border-[#F79009]/40";
+      return "border-[color-mix(in_srgb,var(--risk-elevated)_45%,white)] bg-[color-mix(in_srgb,var(--risk-elevated)_18%,white)] text-[color-mix(in_srgb,var(--risk-elevated)_92%,#7A3E00)]";
     case "Low":
-      return "bg-[#17B26A]/15 text-[#17B26A] border-[#17B26A]/40";
+      return "border-[color-mix(in_srgb,var(--risk-low)_45%,white)] bg-[color-mix(in_srgb,var(--risk-low)_16%,white)] text-[color-mix(in_srgb,var(--risk-low)_92%,#0F5132)]";
   }
 }

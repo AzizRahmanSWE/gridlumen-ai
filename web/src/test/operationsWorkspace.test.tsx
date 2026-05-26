@@ -86,10 +86,26 @@ describe("OperationsWorkspace", () => {
       <OperationsWorkspace preloaded={preloaded} initialScenario="storm" />,
     );
     const map = screen.getByRole("img", {
-      name: /Generalized Mississauga pilot risk zones map/i,
+      name: /Mississauga public screening geography map/i,
     });
     expect(
       within(map).getByLabelText(/Cooksville Central, Critical risk\. Select zone/i),
     ).toBeInTheDocument();
+  });
+
+  it("places intervention queue below the map in the left column", () => {
+    render(
+      <OperationsWorkspace preloaded={preloaded} initialScenario="storm" />,
+    );
+
+    const mapSection = screen.getByLabelText(/Risk map and intervention queue/i);
+    const map = within(mapSection).getByRole("img", {
+      name: /Mississauga public screening geography map/i,
+    });
+    const queue = within(mapSection).getByRole("table");
+
+    expect(
+      map.compareDocumentPosition(queue) & Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy();
   });
 });

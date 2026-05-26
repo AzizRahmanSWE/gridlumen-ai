@@ -167,7 +167,7 @@ def test_generated_geojson_schema_and_feature_properties(tmp_path: Path) -> None
 
     first = geojson["features"][0]
     assert first["type"] == "Feature"
-    assert first["geometry"]["type"] == "Polygon"
+    assert first["geometry"]["type"] in {"Polygon", "MultiPolygon"}
     assert first["properties"]["zone_id"] == "meadowvale-north"
     assert first["properties"]["risk_score"] == 91
     assert REQUIRED_OUTPUT_FIELDS <= set(first["properties"])
