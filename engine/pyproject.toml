@@ -12,6 +12,7 @@ dependencies = []
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0"]
+geo-build = ["shapely>=2,<3"]
 
 [tool.setuptools.packages.find]
 where = ["."]

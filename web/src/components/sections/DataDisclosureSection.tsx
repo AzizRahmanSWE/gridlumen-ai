@@ -63,8 +63,8 @@ export function DataDisclosureSection(props: { className?: string }) {
             <div className="space-y-3">
               <DisclosureRow
                 title="Generalized risk zones"
-                subtitle="Simplified illustrative Mississauga-area polygons (not feeder boundaries)."
-                status="Representative"
+                subtitle="Public City of Mississauga ward-derived screening polygons with representative prototype risk attributes joined to geography."
+                status="Public (optional)"
               />
               <DisclosureRow
                 title="Scenario hazard severity"

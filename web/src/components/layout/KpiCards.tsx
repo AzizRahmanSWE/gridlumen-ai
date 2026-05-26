@@ -20,7 +20,7 @@ export function KpiCards(props: {
   return (
     <section
       className={[
-        "grid gap-4 md:grid-cols-2 xl:grid-cols-4",
+        "grid gap-3 md:grid-cols-2 xl:grid-cols-4",
         props.className ?? "",
       ].join(" ")}
       aria-label="Scenario KPIs"
@@ -31,7 +31,7 @@ export function KpiCards(props: {
       >
         <div className="flex items-end justify-between gap-4">
           <div>
-            <div className="text-3xl font-semibold tracking-tight text-[var(--text-primary)]">
+            <div className="text-2xl font-semibold tracking-tight text-[var(--text-primary)]">
               {props.summary.critical_zones}
             </div>
             <div className="mt-1 inline-flex items-center gap-2 text-xs text-[var(--text-muted)]">
@@ -52,7 +52,7 @@ export function KpiCards(props: {
       <Card title="Zones to Review" subtitle="Elevated + Critical categories">
         <div className="flex items-end justify-between gap-4">
           <div>
-            <div className="text-3xl font-semibold tracking-tight text-[var(--text-primary)]">
+            <div className="text-2xl font-semibold tracking-tight text-[var(--text-primary)]">
               {zonesToReview}
             </div>
             <div className="mt-1 text-xs text-[var(--text-muted)]">
@@ -73,7 +73,7 @@ export function KpiCards(props: {
       <Card title="Peak Utilization" subtitle="Modeled capacity indicator">
         <div className="flex items-end justify-between gap-4">
           <div>
-            <div className="text-3xl font-semibold tracking-tight text-[var(--text-primary)]">
+            <div className="text-2xl font-semibold tracking-tight text-[var(--text-primary)]">
               {Math.round(props.summary.peak_capacity_utilization_percent)}%
             </div>
             <div className="mt-1 text-xs text-[var(--text-muted)]">

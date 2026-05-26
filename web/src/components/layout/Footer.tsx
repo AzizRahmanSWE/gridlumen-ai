@@ -26,7 +26,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-[var(--border)] pt-6 text-xs text-[var(--text-muted)]">
-          <span>Mississauga generalized zones • Privacy-aware prototype</span>
+          <span>Mississauga public screening geometry (ward-derived) • Privacy-aware prototype</span>
           <span>Built for a stable offline demo walk-through</span>
         </div>
       </div>

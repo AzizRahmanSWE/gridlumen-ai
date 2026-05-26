@@ -15,6 +15,10 @@
   --risk-critical: #f04438;
   --border: #e4e7ec;
   --radius-card: 16px;
+  --radius-lg: 12px;
+  --border-strong: #cbd5e1;
+  --shadow-card: 0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.04);
+  --shadow-map: 0 8px 24px rgba(7, 26, 51, 0.28);
 
   color-scheme: light;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;

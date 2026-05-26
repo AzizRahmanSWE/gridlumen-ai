@@ -1,4 +1,4 @@
-import type { GeoJsonPolygon } from "../data/types";
+import type { GeoJsonGeometry } from "../data/types";
 
 export interface ViewBox {
   minX: number;
@@ -7,13 +7,18 @@ export interface ViewBox {
   height: number;
 }
 
-export function computeBounds(polygons: GeoJsonPolygon[]): {
+function polygonRings(geometry: GeoJsonGeometry): number[][][] {
+  if (geometry.type === "Polygon") return geometry.coordinates;
+  return geometry.coordinates.flatMap((polygon) => polygon);
+}
+
+export function computeBounds(geometries: GeoJsonGeometry[]): {
   minLon: number;
   maxLon: number;
   minLat: number;
   maxLat: number;
 } {
-  const coords = polygons.flatMap((p) => p.coordinates[0] ?? []);
+  const coords = geometries.flatMap((g) => polygonRings(g).flatMap((r) => r));
   const lons = coords.map(([lon]) => lon);
   const lats = coords.map(([, lat]) => lat);
   return {
@@ -24,14 +29,14 @@ export function computeBounds(polygons: GeoJsonPolygon[]): {
   };
 }
 
-export function projectPolygonWithBounds(
-  polygon: GeoJsonPolygon,
+export function projectGeometryWithBounds(
+  geometry: GeoJsonGeometry,
   bounds: { minLon: number; maxLon: number; minLat: number; maxLat: number },
   viewBox: ViewBox,
   padding = 16,
-): string {
-  const ring = polygon.coordinates[0];
-  if (!ring?.length) return "";
+): string[] {
+  const rings = polygonRings(geometry).filter((ring) => ring.length > 0);
+  if (!rings.length) return [];
 
   const { minLon, maxLon, minLat, maxLat } = bounds;
   const innerW = viewBox.width - padding * 2;
@@ -44,5 +49,7 @@ export function projectPolygonWithBounds(
   const toY = (lat: number) =>
     viewBox.minY + padding + innerH - ((lat - minLat) / latSpan) * innerH;
 
-  return ring.map(([lon, lat]) => `${toX(lon)},${toY(lat)}`).join(" ");
+  return rings.map((ring) =>
+    ring.map(([lon, lat]) => `${toX(lon)},${toY(lat)}`).join(" "),
+  );
 }

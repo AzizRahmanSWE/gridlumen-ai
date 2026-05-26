@@ -24,8 +24,8 @@ def build_scored_geojson(
             raise ValueError(f"missing geometry for zone_id {scored_zone.zone_id!r}")
 
         geometry = deepcopy(source_feature.get("geometry"))
-        if not isinstance(geometry, dict) or geometry.get("type") != "Polygon":
-            raise ValueError(f"zone {scored_zone.zone_id!r} must use Polygon geometry")
+        if not isinstance(geometry, dict) or geometry.get("type") not in {"Polygon", "MultiPolygon"}:
+            raise ValueError(f"zone {scored_zone.zone_id!r} must use Polygon or MultiPolygon geometry")
 
         features.append(
             {
@@ -42,7 +42,12 @@ def build_scored_geojson(
             "display_name": display_name,
             "prototype_data": True,
             "disclaimer": MANDATORY_DISCLAIMER,
-            "geometry_note": "Generalized demonstration polygons; not utility asset topology.",
+            "geometry_note": "Generalized public screening geography (ward-derived), not utility asset topology.",
+            "geometry_source": "City of Mississauga — Ward Boundaries",
+            "geometry_source_url": "https://data.mississauga.ca/datasets/ward-boundaries/about",
+            "geometry_retrieved_on": "2026-05-26",
+            "geometry_attribution": "Contains information licensed under the City of Mississauga Open Data Terms of Use.",
+            "join_note": "Risk scores are representative prototype values joined to public screening geography.",
         },
         "features": features,
     }

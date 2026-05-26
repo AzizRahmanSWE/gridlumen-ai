@@ -1,0 +1,98 @@
+{
+  "geometry_mode": "ward_fallback",
+  "source_dataset": "City of Mississauga — Ward Boundaries (Municipal Electoral Boundaries)",
+  "source_portal_page": "https://data.mississauga.ca/datasets/ward-boundaries/about",
+  "source_arcgis_query": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Ward_Boundaries/FeatureServer/2/query",
+  "retrieved_on": "2026-05-26",
+  "assignment_note": "Each canonical prototype zone_id is assigned the ward polygon whose centroid is nearest the prior illustrative rectangle anchor from the MVP contract — eight distinct wards covering Cooksville-adjacent, Meadowvale-adjacent, Port Credit-adjacent, Streetsville-adjacent, Erin Mills-adjacent, Malton-adjacent, Clarkson-adjacent, and City Centre-adjacent pilot screening areas. Representative risk scores remain fixture-driven and are spatially joined to these public wards for credible geography only.",
+  "mappings": [
+    {
+      "zone_id": "cooksville-central",
+      "zone_name": "Cooksville Central",
+      "screening_geometry": {
+        "type": "ward",
+        "ward": "7"
+      },
+      "public_source_feature_ids": {
+        "WARD": "7"
+      }
+    },
+    {
+      "zone_id": "meadowvale-north",
+      "zone_name": "Meadowvale North",
+      "screening_geometry": {
+        "type": "ward",
+        "ward": "9"
+      },
+      "public_source_feature_ids": {
+        "WARD": "9"
+      }
+    },
+    {
+      "zone_id": "port-credit-east",
+      "zone_name": "Port Credit East",
+      "screening_geometry": {
+        "type": "ward",
+        "ward": "1"
+      },
+      "public_source_feature_ids": {
+        "WARD": "1"
+      }
+    },
+    {
+      "zone_id": "streetsville-west",
+      "zone_name": "Streetsville West",
+      "screening_geometry": {
+        "type": "ward",
+        "ward": "10"
+      },
+      "public_source_feature_ids": {
+        "WARD": "10"
+      }
+    },
+    {
+      "zone_id": "erin-mills",
+      "zone_name": "Erin Mills",
+      "screening_geometry": {
+        "type": "ward",
+        "ward": "8"
+      },
+      "public_source_feature_ids": {
+        "WARD": "8"
+      }
+    },
+    {
+      "zone_id": "malton-industrial",
+      "zone_name": "Malton Industrial",
+      "screening_geometry": {
+        "type": "ward",
+        "ward": "5"
+      },
+      "public_source_feature_ids": {
+        "WARD": "5"
+      }
+    },
+    {
+      "zone_id": "clarkson-south",
+      "zone_name": "Clarkson South",
+      "screening_geometry": {
+        "type": "ward",
+        "ward": "2"
+      },
+      "public_source_feature_ids": {
+        "WARD": "2"
+      }
+    },
+    {
+      "zone_id": "city-centre",
+      "zone_name": "City Centre",
+      "screening_geometry": {
+        "type": "ward",
+        "ward": "4"
+      },
+      "public_source_feature_ids": {
+        "WARD": "4"
+      }
+    }
+  ]
+}
