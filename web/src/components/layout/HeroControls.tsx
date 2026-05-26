@@ -13,6 +13,7 @@ export function HeroControls(props: {
   onScenarioChange?: (scenario: ScenarioId) => void;
   forecastHorizonLabel?: string;
   onOpenSecuredLayer?: () => void;
+  disabled?: boolean;
   className?: string;
 }) {
   return (
@@ -42,6 +43,7 @@ export function HeroControls(props: {
           <button
             type="button"
             onClick={props.onOpenSecuredLayer}
+            disabled={props.disabled}
             className={[
               "inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-white px-3 py-1.5",
               "text-xs font-semibold text-[var(--text-primary)]",
@@ -65,6 +67,7 @@ export function HeroControls(props: {
                   key={id}
                   type="button"
                   onClick={() => props.onScenarioChange?.(id)}
+                  disabled={props.disabled}
                   aria-pressed={selected}
                   className={[
                     "inline-flex items-center gap-2 rounded-lg border px-3 py-2 text-xs font-semibold",

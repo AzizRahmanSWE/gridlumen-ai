@@ -56,9 +56,10 @@ function App() {
 
 | Prop | Type | Source |
 |------|------|--------|
-| `activeScenario` | `ScenarioId` | `useScenario().scenario` |
+| `scenario` | `ScenarioId` | `useScenario().scenario` |
 | `onScenarioChange` | `(id: ScenarioId) => void` | `useScenario().setScenario` |
-| `onSecuredLayerClick` | `() => void` | Opens `SecuredUtilityLayerModal` |
+| `onOpenSecuredLayer` | `() => void` | Opens `SecuredUtilityLayerModal` |
+| `disabled` | `boolean` | `useScenario().loading` |
 | `forecastHorizon` | `string` | Static: `"Next 24 hours"` |
 | `disabled` | `boolean` | `useScenario().loading` |
 

@@ -77,7 +77,17 @@ Categories: Low 0–49 · Elevated 50–69 · Critical 70–100.
 
 ## Implementation status
 
-This repository is initialized with the **F0 foundation scaffold** (contracts, fixtures, folder structure, starter web/engine tooling). Feature work follows `CURSOR_TASKS.md` (P1 engine, P2–P6 parallel tracks, then I1 integration and Q1 hardening).
+- **F0:** Foundation contracts and tooling
+- **P1–P4:** Deterministic engine, generated outputs, dashboard shell, map/interactions, ArcGIS proof docs (merged to `main`)
+- **I1:** Integrated MVP dashboard on branch `integrate/mvp` — run `npm run dev` in `web/` to open the full offline demo (default: storm scenario, Cooksville Central selected)
+
+Regenerate scenario outputs after fixture changes:
+
+```bash
+cd engine
+source .venv/bin/activate
+python -m gridlumen.risk_engine --all --copy-to-web
+```
 
 ## License
 
