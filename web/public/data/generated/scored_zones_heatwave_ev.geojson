@@ -1,0 +1,372 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "scenario": "heatwave_ev",
+    "display_name": "Heatwave + Evening EV Demand",
+    "prototype_data": true,
+    "disclaimer": "Representative prototype data only; not an operational outage forecast or equipment-failure prediction.",
+    "geometry_note": "Generalized demonstration polygons; not utility asset topology."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.782,
+              43.608
+            ],
+            [
+              -79.762,
+              43.608
+            ],
+            [
+              -79.762,
+              43.628
+            ],
+            [
+              -79.782,
+              43.628
+            ],
+            [
+              -79.782,
+              43.608
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "meadowvale-north",
+        "zone_name": "Meadowvale North",
+        "scenario": "heatwave_ev",
+        "hazard_score": 95,
+        "infrastructure_score": 77,
+        "capacity_score": 100,
+        "risk_score": 91,
+        "risk_level": "Critical",
+        "primary_driver": "EV demand + low margin",
+        "recommended_action": "Review load-relief strategy",
+        "urgency": "Immediate",
+        "prototype_data": true,
+        "disclaimer": "Representative prototype data only; not an operational outage forecast or equipment-failure prediction."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.658,
+              43.588
+            ],
+            [
+              -79.638,
+              43.588
+            ],
+            [
+              -79.638,
+              43.608
+            ],
+            [
+              -79.658,
+              43.608
+            ],
+            [
+              -79.658,
+              43.588
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "city-centre",
+        "zone_name": "City Centre",
+        "scenario": "heatwave_ev",
+        "hazard_score": 90,
+        "infrastructure_score": 55,
+        "capacity_score": 94,
+        "risk_score": 81,
+        "risk_level": "Critical",
+        "primary_driver": "Cooling + density",
+        "recommended_action": "Monitor evening peak",
+        "urgency": "Immediate",
+        "prototype_data": true,
+        "disclaimer": "Representative prototype data only; not an operational outage forecast or equipment-failure prediction."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.738,
+              43.528
+            ],
+            [
+              -79.718,
+              43.528
+            ],
+            [
+              -79.718,
+              43.548
+            ],
+            [
+              -79.738,
+              43.548
+            ],
+            [
+              -79.738,
+              43.528
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "erin-mills",
+        "zone_name": "Erin Mills",
+        "scenario": "heatwave_ev",
+        "hazard_score": 72,
+        "infrastructure_score": 50,
+        "capacity_score": 85,
+        "risk_score": 69,
+        "risk_level": "Elevated",
+        "primary_driver": "Residential EV adoption",
+        "recommended_action": "Planning review",
+        "urgency": "High",
+        "prototype_data": true,
+        "disclaimer": "Representative prototype data only; not an operational outage forecast or equipment-failure prediction."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.626,
+              43.58
+            ],
+            [
+              -79.611,
+              43.58
+            ],
+            [
+              -79.611,
+              43.594
+            ],
+            [
+              -79.626,
+              43.594
+            ],
+            [
+              -79.626,
+              43.58
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "cooksville-central",
+        "zone_name": "Cooksville Central",
+        "scenario": "heatwave_ev",
+        "hazard_score": 68,
+        "infrastructure_score": 65,
+        "capacity_score": 65,
+        "risk_score": 66,
+        "risk_level": "Elevated",
+        "primary_driver": "Cooling demand",
+        "recommended_action": "Monitor threshold",
+        "urgency": "Medium",
+        "prototype_data": true,
+        "disclaimer": "Representative prototype data only; not an operational outage forecast or equipment-failure prediction."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.648,
+              43.708
+            ],
+            [
+              -79.628,
+              43.708
+            ],
+            [
+              -79.628,
+              43.728
+            ],
+            [
+              -79.648,
+              43.728
+            ],
+            [
+              -79.648,
+              43.708
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "malton-industrial",
+        "zone_name": "Malton Industrial",
+        "scenario": "heatwave_ev",
+        "hazard_score": 70,
+        "infrastructure_score": 50,
+        "capacity_score": 64,
+        "risk_score": 62,
+        "risk_level": "Elevated",
+        "primary_driver": "Commercial demand",
+        "recommended_action": "Evaluate margin",
+        "urgency": "Medium",
+        "prototype_data": true,
+        "disclaimer": "Representative prototype data only; not an operational outage forecast or equipment-failure prediction."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.758,
+              43.568
+            ],
+            [
+              -79.738,
+              43.568
+            ],
+            [
+              -79.738,
+              43.588
+            ],
+            [
+              -79.758,
+              43.588
+            ],
+            [
+              -79.758,
+              43.568
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "streetsville-west",
+        "zone_name": "Streetsville West",
+        "scenario": "heatwave_ev",
+        "hazard_score": 60,
+        "infrastructure_score": 52,
+        "capacity_score": 55,
+        "risk_score": 56,
+        "risk_level": "Elevated",
+        "primary_driver": "Residential demand",
+        "recommended_action": "Monitor evening peak",
+        "urgency": "Medium",
+        "prototype_data": true,
+        "disclaimer": "Representative prototype data only; not an operational outage forecast or equipment-failure prediction."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.652,
+              43.498
+            ],
+            [
+              -79.632,
+              43.498
+            ],
+            [
+              -79.632,
+              43.518
+            ],
+            [
+              -79.652,
+              43.518
+            ],
+            [
+              -79.652,
+              43.498
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "clarkson-south",
+        "zone_name": "Clarkson South",
+        "scenario": "heatwave_ev",
+        "hazard_score": 57,
+        "infrastructure_score": 44,
+        "capacity_score": 55,
+        "risk_score": 53,
+        "risk_level": "Elevated",
+        "primary_driver": "Heat demand",
+        "recommended_action": "Monitor threshold",
+        "urgency": "Medium",
+        "prototype_data": true,
+        "disclaimer": "Representative prototype data only; not an operational outage forecast or equipment-failure prediction."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.592,
+              43.538
+            ],
+            [
+              -79.572,
+              43.538
+            ],
+            [
+              -79.572,
+              43.558
+            ],
+            [
+              -79.592,
+              43.558
+            ],
+            [
+              -79.592,
+              43.538
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "port-credit-east",
+        "zone_name": "Port Credit East",
+        "scenario": "heatwave_ev",
+        "hazard_score": 60,
+        "infrastructure_score": 40,
+        "capacity_score": 40,
+        "risk_score": 48,
+        "risk_level": "Low",
+        "primary_driver": "Water context",
+        "recommended_action": "Continue routine monitoring",
+        "urgency": "Routine",
+        "prototype_data": true,
+        "disclaimer": "Representative prototype data only; not an operational outage forecast or equipment-failure prediction."
+      }
+    }
+  ]
+}
